@@ -46,8 +46,16 @@ Color de los Puntos: Codifica el tema principal de la noticia (basado en palabra
 Forma de los Puntos: Indica la fuente de la noticia (por ejemplo, medios de comunicación diferentes).
 Cada punto en el gráfico tridimensional podría representar una noticia individual. Los usuarios podrían explorar el gráfico moviéndose en tres dimensiones y observando cómo diferentes variables se combinan para representar cada noticia. Un punto grande, de color rojo y en forma de círculo podría representar una noticia negativa, de alta importancia en la categoría política, con un contenido largo y de una fuente específica, por ejemplo.
 
+Nota: generar mapa conceptual con GPT
 
+## Ejemplos de web:
 
+- https://ai-talks.streamlit.app/
+- https://bert-keyword-extractor.streamlit.app/
+- https://gptflix.streamlit.app/
+- https://multichem-mlb-research-tables-streamlit-app-r18mai.streamlit.app/
+- https://st-worldle.streamlit.app/?locale=en
+- https://cefis-food-indices.streamlit.app/
 
 
 
