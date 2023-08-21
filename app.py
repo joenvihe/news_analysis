@@ -14,6 +14,12 @@ data = pd.DataFrame({
 
 # Título de la página
 st.set_page_config(layout="wide")
+# Esconder el mensaje de "Rerunning"
+st.markdown("<style>div.stButton > button:first-child { display: none; }</style>", unsafe_allow_html=True)
+
+
+
+
 st.title("Dashboard de Análisis de Datos")
 
 # Create two columns layout
