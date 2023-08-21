@@ -44,9 +44,40 @@ div[data-testid="stToolbar"] {
 </style>
 """, unsafe_allow_html=True)
 
+
+# Estilos CSS personalizados para la barra de menú
+custom_styles = """
+<style>
+.navbar {
+    display: flex;
+    background-color: #333;
+    padding: 10px 0;
+    color: white;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+}
+
+.nav-link:hover {
+    background-color: #555;
+}
+</style>
+"""
+
+# Barra de menú personalizada
+st.markdown(custom_styles, unsafe_allow_html=True)
+menu_option = st.selectbox("", ["Inicio", "Opción 1", "Opción 2", "Opción 3"], key="menu")
+
+# Sección de contenido
+st.title("Contenido Principal")
+
+
 # Menú de navegación
-st.markdown('<div class="navbar"><a class="nav-link" href="#inicio">Inicio</a><a class="nav-link" href="#opcion1">Opción 1</a><a class="nav-link" href="#opcion2">Opción 2</a><a class="nav-link" href="#opcion3">Opción 3</a></div>', unsafe_allow_html=True)
-menu_option = st.selectbox("Selecciona una opción del menú", ["Inicio", "Opción 1", "Opción 2"])
+##st.markdown('<div class="navbar"><a class="nav-link" href="#inicio">Inicio</a><a class="nav-link" href="#opcion1">Opción 1</a><a class="nav-link" href="#opcion2">Opción 2</a><a class="nav-link" href="#opcion3">Opción 3</a></div>', unsafe_allow_html=True)
+##menu_option = st.selectbox("Selecciona una opción del menú", ["Inicio", "Opción 1", "Opción 2"])
 
 # Sección Inicio
 #st.markdown('<h2 id="inicio">Inicio</h2>', unsafe_allow_html=True)
