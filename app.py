@@ -107,6 +107,6 @@ else:
 
 
 # Información de contacto
-st.sidebar.title("Contacto")
-st.sidebar.write("Correo electrónico: ejemplo@example.com")
-st.sidebar.write("Teléfono: +123-456-7890")
+#st.sidebar.title("Contacto")
+#st.sidebar.write("Correo electrónico: ejemplo@example.com")
+#st.sidebar.write("Teléfono: +123-456-7890")
