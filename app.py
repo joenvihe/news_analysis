@@ -28,26 +28,30 @@ st.markdown(
     """
     <div class="header">
         <a class="menu-item" href="#inicio">Inicio</a>
-        <a class="menu-item" href="#opcion1">Opción 1</a>
-        <a class="menu-item" href="#opcion2">Opción 2</a>
+        <a class="menu-item" href="#hola">Hola</a>
+        <a class="menu-item" href="#fin">Fin</a>
     </div>
     """,
     unsafe_allow_html=True,
 )
 
-# Agregar espaciado para separar el menú del contenido
-st.write("")
+# Agregar título a la portada
+st.title("Portada")
 
-# Agregar secciones para cada opción del menú
+# Mostrar sección de Inicio
 if st.button("Inicio"):
-    st.write("¡Hola! Bienvenido a la sección de Inicio.")
+    st.header("Sección de Inicio")
+    st.write("¡Bienvenido a la sección de Inicio! Aquí encontrarás información de la portada.")
 
-if st.button("Opción 1"):
-    st.write("Esta es la sección de la Opción 1. ¡Contenido interesante!")
+# Mostrar mensaje "Hola"
+if st.button("Hola"):
+    st.header("¡Hola!")
+    st.write("¡Hola! Este es un mensaje de saludo.")
 
-if st.button("Opción 2"):
-    st.write("Aquí está la sección de la Opción 2. ¡Descubre más contenido!")
+# Mostrar mensaje "Fin"
+if st.button("Fin"):
+    st.header("Fin")
+    st.write("¡Gracias por visitar la sección de Fin!")
 
 # Agregar espaciado al final
 st.write("")
-
