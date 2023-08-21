@@ -36,6 +36,10 @@ st.markdown(
 
 # Obtener el valor de la opción seleccionada
 option = st.session_state.selected_option
+if option:
+    print("hol")
+else:
+    option = "inicio"
 
 # Mostrar contenido según la opción seleccionada
 if option == "inicio":
