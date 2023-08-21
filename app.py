@@ -16,7 +16,7 @@ data = pd.DataFrame({
 st.title("Dashboard de Análisis de Datos")
 
 # Create two columns layout
-col1, col2 = st.beta_columns(2)
+col1, col2 = st.columns(2)
 
 # Column 1: Display country data
 with col1:
