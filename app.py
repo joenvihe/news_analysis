@@ -43,6 +43,9 @@ st.markdown("""
 # Menú de navegación
 st.markdown('<div class="navbar"><a class="nav-link" href="#inicio">Inicio</a><a class="nav-link" href="#opcion1">Opción 1</a><a class="nav-link" href="#opcion2">Opción 2</a><a class="nav-link" href="#opcion3">Opción 3</a></div>', unsafe_allow_html=True)
 
+# Sección Inicio
+st.markdown('<h2 id="inicio">Inicio</h2>', unsafe_allow_html=True)
+
 st.title("Dashboard de Análisis de Datos")
 
 # Opciones del menú
@@ -104,6 +107,10 @@ elif menu_option == "Opción 3":
     st.write("Aquí encontrarás información sobre la Opción 3.")
 else:
     st.write("Selecciona una opción del menú para ver la información relacionada.")
+
+# Sección Opción 1
+st.markdown('<h2 id="opcion1">Opción 1</h2>', unsafe_allow_html=True)
+st.write("Aquí encontrarás información sobre la Opción 1.")
 
 
 # Información de contacto
