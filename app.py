@@ -40,6 +40,7 @@ if option:
     print("hol")
 else:
     option = "inicio"
+    st.session_state.selected_option = option
 
 # Mostrar contenido según la opción seleccionada
 if option == "inicio":
