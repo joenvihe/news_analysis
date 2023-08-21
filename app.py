@@ -60,7 +60,7 @@ st.set_page_config(layout="wide")
 
 
 # Estilos CSS para el menú de navegación
-st.markdown("""
+st.markdown("
 <style>
 .navbar {
     display: flex;
@@ -69,7 +69,7 @@ st.markdown("""
     padding: 10px 0;
 }
 
-div[data-testid="stToolbar"] {
+div[data-testid='stToolbar'] {
   display: none;
 }
 
@@ -81,11 +81,11 @@ div[data-testid="stToolbar"] {
 }
 
 </style>
-""", unsafe_allow_html=True)
+", unsafe_allow_html=True)
 
 
 # Estilos CSS personalizados para la barra de menú
-custom_styles = """
+custom_styles = "
 <style>
 .navbar {
     display: flex;
@@ -104,7 +104,7 @@ custom_styles = """
     background-color: #555;
 }
 </style>
-"""
+"
 
 # Barra de menú personalizada
 st.markdown(custom_styles, unsafe_allow_html=True)
