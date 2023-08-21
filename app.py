@@ -15,64 +15,67 @@ data = pd.DataFrame({
 # Título de la página
 st.set_page_config(layout="wide")
 # Esconder el mensaje de "Rerunning"
-st.markdown("<style>div.stButton > button:first-child { display: none; }</style>", unsafe_allow_html=True)
-
-
-
-
 st.title("Dashboard de Análisis de Datos")
 
-# Sección 1: Introducción
-st.markdown("## Sección 1: Introducción")
-st.write("Bienvenido al manual de usuario de la aplicación. Aquí encontrarás información sobre cómo utilizar la aplicación y sus características principales.")
+# Opciones del menú
+menu_option = st.selectbox("Selecciona una opción del menú", ["Opción 1", "Opción 2", "Opción 3"])
 
-# Create two columns layout
-col1, col2 = st.columns(2)
+if menu_option == "Opción 1":
+    # Sección 1: Introducción
+    st.markdown("## Sección 1: Introducción")
+    st.write("Bienvenido al manual de usuario de la aplicación. Aquí encontrarás información sobre cómo utilizar la aplicación y sus características principales.")
 
-# Column 1: Display country data
-with col1:
-    # Gráfico de líneas para Ventas y Gastos
-    st.subheader("Gráfico de Ventas y Gastos")
-    plt.figure(figsize=(10, 6))
-    sns.lineplot(data=data, x='Fecha', y='Ventas', label='Ventas')
-    sns.lineplot(data=data, x='Fecha', y='Gastos', label='Gastos')
-    plt.xlabel("Fecha")
-    plt.ylabel("Monto")
-    plt.legend()
-    st.pyplot(plt)
+    # Create two columns layout
+    col1, col2 = st.columns(2)
 
-
-    # Gráfico de dispersión para Ventas vs. Utilidad
-    st.subheader("Gráfico de Ventas vs. Utilidad")
-    plt.figure(figsize=(10, 6))
-    sns.scatterplot(data=data, x='Ventas', y='Utilidad')
-    plt.xlabel("Ventas")
-    plt.ylabel("Utilidad")
-    st.pyplot(plt)
-
-# Column 2: Display charts
-with col2:
-    # Gráfico de barras para Utilidad
-    st.subheader("Gráfico de Utilidad")
-    plt.figure(figsize=(10, 6))
-    sns.barplot(data=data, x='Fecha', y='Utilidad')
-    plt.xlabel("Fecha")
-    plt.ylabel("Utilidad")
-    plt.xticks(rotation=45)
-    st.pyplot(plt)
-
-    # Tabla de datos
-    st.subheader("Tabla de Datos")
-    st.dataframe(data)
-
-    # Resumen estadístico
-    st.subheader("Resumen Estadístico")
-    st.write(data.describe())
+    # Column 1: Display country data
+    with col1:
+        # Gráfico de líneas para Ventas y Gastos
+        st.subheader("Gráfico de Ventas y Gastos")
+        plt.figure(figsize=(10, 6))
+        sns.lineplot(data=data, x='Fecha', y='Ventas', label='Ventas')
+        sns.lineplot(data=data, x='Fecha', y='Gastos', label='Gastos')
+        plt.xlabel("Fecha")
+        plt.ylabel("Monto")
+        plt.legend()
+        st.pyplot(plt)
 
 
-# Sección 2: Uso básico
-st.markdown("## Sección 2: Uso Básico")
-st.write("En esta sección, te explicaremos cómo usar las funciones básicas de la aplicación. Por ejemplo, cómo seleccionar un país y visualizar sus datos.")
+        # Gráfico de dispersión para Ventas vs. Utilidad
+        st.subheader("Gráfico de Ventas vs. Utilidad")
+        plt.figure(figsize=(10, 6))
+        sns.scatterplot(data=data, x='Ventas', y='Utilidad')
+        plt.xlabel("Ventas")
+        plt.ylabel("Utilidad")
+        st.pyplot(plt)
+
+    # Column 2: Display charts
+    with col2:
+        # Gráfico de barras para Utilidad
+        st.subheader("Gráfico de Utilidad")
+        plt.figure(figsize=(10, 6))
+        sns.barplot(data=data, x='Fecha', y='Utilidad')
+        plt.xlabel("Fecha")
+        plt.ylabel("Utilidad")
+        plt.xticks(rotation=45)
+        st.pyplot(plt)
+
+        # Tabla de datos
+        st.subheader("Tabla de Datos")
+        st.dataframe(data)
+
+        # Resumen estadístico
+        st.subheader("Resumen Estadístico")
+        st.write(data.describe())
+
+elif menu_option == "Opción 2":
+    # Sección 2: Uso básico
+    st.markdown("## Sección 2: Uso Básico")
+    st.write("En esta sección, te explicaremos cómo usar las funciones básicas de la aplicación. Por ejemplo, cómo seleccionar un país y visualizar sus datos.")
+elif menu_option == "Opción 3":
+    st.write("Aquí encontrarás información sobre la Opción 3.")
+else:
+    st.write("Selecciona una opción del menú para ver la información relacionada.")
 
 
 # Información de contacto
