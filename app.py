@@ -27,10 +27,15 @@ st.markdown(
 st.markdown(
     """
     <div class="header">
-        <a class="menu-item" href="#">Inicio</a>
-        <a class="menu-item" href="#">Opción 1</a>
-        <a class="menu-item" href="#">Opción 2</a>
+        <a class="menu-item" href="#" onclick="selectOption('Inicio')">Inicio</a>
+        <a class="menu-item" href="#" onclick="selectOption('Opción 1')">Opción 1</a>
+        <a class="menu-item" href="#" onclick="selectOption('Opción 2')">Opción 2</a>
     </div>
+    <script>
+    function selectOption(option) {
+        Streamlit.setSessionState({ selected_option: option });
+    }
+    </script>
     """,
     unsafe_allow_html=True,
 )
@@ -39,10 +44,11 @@ st.markdown(
 st.title("Contenido de la Página")
 
 # Detectar la opción seleccionada en el menú
-menu_option = st.session_state.selected_option
+if "selected_option" not in st.session_state:
+    st.session_state.selected_option = "Inicio"
 
 # Mostrar el contenido correspondiente a la opción seleccionada
-if menu_option == "Opción 1":
+if st.session_state.selected_option == "Opción 1":
     st.write("Hola")
-elif menu_option == "Opción 2":
+elif st.session_state.selected_option == "Opción 2":
     st.write("Adiós")
