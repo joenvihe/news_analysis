@@ -30,6 +30,10 @@ st.markdown("""
     padding: 10px 0;
 }
 
+div[data-testid="stToolbar"] {
+  display: none;
+}
+
 .nav-link {
     color: white;
     text-decoration: none;
