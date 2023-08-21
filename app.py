@@ -46,14 +46,13 @@ div[data-testid="stToolbar"] {
 
 # Menú de navegación
 st.markdown('<div class="navbar"><a class="nav-link" href="#inicio">Inicio</a><a class="nav-link" href="#opcion1">Opción 1</a><a class="nav-link" href="#opcion2">Opción 2</a><a class="nav-link" href="#opcion3">Opción 3</a></div>', unsafe_allow_html=True)
+menu_option = st.selectbox("Selecciona una opción del menú", ["Inicio", "Opción 1", "Opción 2"])
 
 # Sección Inicio
-st.markdown('<h2 id="inicio">Inicio</h2>', unsafe_allow_html=True)
-
-st.title("Dashboard de Análisis de Datos")
+#st.markdown('<h2 id="inicio">Inicio</h2>', unsafe_allow_html=True)
+#st.title("Dashboard de Análisis de Datos")
 
 # Opciones del menú
-menu_option = st.selectbox("Selecciona una opción del menú", ["Inicio", "Opción 1", "Opción 2"])
 
 if menu_option == "Inicio":
     # Sección 1: Introducción
@@ -105,7 +104,6 @@ if menu_option == "Inicio":
 
 elif menu_option == "Opción 1":
     # Sección 2: Uso básico
-    st.markdown('<div class="navbar"><a class="nav-link" href="#inicio">Inicio</a><a class="nav-link" href="#opcion1">Opción 1</a><a class="nav-link" href="#opcion2">Opción 2</a><a class="nav-link" href="#opcion3">Opción 3</a></div>', unsafe_allow_html=True)
     st.markdown('<h2 id="opcion1">Opción 1</h2>', unsafe_allow_html=True)
     st.write("En esta sección, te explicaremos cómo usar las funciones básicas de la aplicación. Por ejemplo, cómo seleccionar un país y visualizar sus datos.")
 elif menu_option == "Opción 2":
