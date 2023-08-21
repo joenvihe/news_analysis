@@ -22,6 +22,10 @@ st.markdown("<style>div.stButton > button:first-child { display: none; }</style>
 
 st.title("Dashboard de Análisis de Datos")
 
+# Sección 1: Introducción
+st.markdown("## Sección 1: Introducción")
+st.write("Bienvenido al manual de usuario de la aplicación. Aquí encontrarás información sobre cómo utilizar la aplicación y sus características principales.")
+
 # Create two columns layout
 col1, col2 = st.columns(2)
 
@@ -64,6 +68,12 @@ with col2:
     # Resumen estadístico
     st.subheader("Resumen Estadístico")
     st.write(data.describe())
+
+
+# Sección 2: Uso básico
+st.markdown("## Sección 2: Uso Básico")
+st.write("En esta sección, te explicaremos cómo usar las funciones básicas de la aplicación. Por ejemplo, cómo seleccionar un país y visualizar sus datos.")
+
 
 # Información de contacto
 st.sidebar.title("Contacto")
