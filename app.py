@@ -14,6 +14,7 @@ data = pd.DataFrame({
 
 # Título de la página
 st.title("Dashboard de Análisis de Datos")
+st.set_page_config(layout="wide")
 
 # Create two columns layout
 col1, col2 = st.columns(2)
