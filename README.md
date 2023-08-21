@@ -58,5 +58,14 @@ Nota: generar mapa conceptual con GPT
 - https://cefis-food-indices.streamlit.app/
 
 
+## Web de base
+- https://farolcovid.coronacidades.org/?page=Inicio#
+
+## Ejecucion
+> streamlit run app.py --server.port 8888
+
+
+
+
 
 
