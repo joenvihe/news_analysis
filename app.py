@@ -1,57 +1,49 @@
 import streamlit as st
 
-# Estilo CSS para el menú en el header
+# Agregar CSS personalizado para la barra de menú
 st.markdown(
     """
     <style>
-    .header {
+    .menu-bar {
         display: flex;
         justify-content: space-between;
-        background-color: #f2f2f2;
-        padding: 10px 20px;
         align-items: center;
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
     }
     
-    .menu-item {
+    .menu-option {
         margin-right: 20px;
-        color: #333;
-        text-decoration: none;
-        font-weight: bold;
+        cursor: pointer;
     }
     </style>
     """,
-    unsafe_allow_html=True,
+    unsafe_allow_html=True
 )
 
-# Crear el menú en el header
+# Crear la barra de menú en la cabecera
 st.markdown(
     """
-    <div class="header">
-        <a class="menu-item" href="#inicio">Inicio</a>
-        <a class="menu-item" href="#hola">Hola</a>
-        <a class="menu-item" href="#fin">Fin</a>
+    <div class="menu-bar">
+        <div class="menu-option" id="inicio">Inicio</div>
+        <div class="menu-option" id="hola">Hola</div>
+        <div class="menu-option" id="fin">Fin</div>
     </div>
     """,
-    unsafe_allow_html=True,
+    unsafe_allow_html=True
 )
 
-# Agregar título a la portada
-st.title("Portada")
+# Obtener el valor de la opción seleccionada
+option = st.session_state.selected_option
 
-# Mostrar sección de Inicio
-if st.button("Inicio"):
-    st.header("Sección de Inicio")
-    st.write("¡Bienvenido a la sección de Inicio! Aquí encontrarás información de la portada.")
-
-# Mostrar mensaje "Hola"
-if st.button("Hola"):
-    st.header("¡Hola!")
-    st.write("¡Hola! Este es un mensaje de saludo.")
-
-# Mostrar mensaje "Fin"
-if st.button("Fin"):
-    st.header("Fin")
-    st.write("¡Gracias por visitar la sección de Fin!")
-
-# Agregar espaciado al final
-st.write("")
+# Mostrar contenido según la opción seleccionada
+if option == "inicio":
+    st.title("Página de Inicio")
+    st.write("Bienvenido a la página de inicio.")
+elif option == "hola":
+    st.title("Página de Hola")
+    st.write("¡Hola! Esta es la página de saludo.")
+elif option == "fin":
+    st.title("Página de Fin")
+    st.write("Esta es la página de fin.")
