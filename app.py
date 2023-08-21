@@ -49,10 +49,11 @@ st.markdown('<h2 id="inicio">Inicio</h2>', unsafe_allow_html=True)
 st.title("Dashboard de Análisis de Datos")
 
 # Opciones del menú
-menu_option = st.selectbox("Selecciona una opción del menú", ["Opción 1", "Opción 2", "Opción 3"])
+menu_option = st.selectbox("Selecciona una opción del menú", ["inicio", "Opción 2", "Opción 3"])
 
-if menu_option == "Opción 1":
+if menu_option == "inicio":
     # Sección 1: Introducción
+    st.markdown('<div class="navbar"><a class="nav-link" href="#inicio">Inicio</a><a class="nav-link" href="#opcion1">Opción 1</a><a class="nav-link" href="#opcion2">Opción 2</a><a class="nav-link" href="#opcion3">Opción 3</a></div>', unsafe_allow_html=True)
     st.markdown("## Sección 1: Introducción")
     st.write("Bienvenido al manual de usuario de la aplicación. Aquí encontrarás información sobre cómo utilizar la aplicación y sus características principales.")
 
@@ -99,18 +100,15 @@ if menu_option == "Opción 1":
         st.subheader("Resumen Estadístico")
         st.write(data.describe())
 
-elif menu_option == "Opción 2":
+elif menu_option == "opcion1":
     # Sección 2: Uso básico
-    st.markdown("## Sección 2: Uso Básico")
+    st.markdown('<div class="navbar"><a class="nav-link" href="#inicio">Inicio</a><a class="nav-link" href="#opcion1">Opción 1</a><a class="nav-link" href="#opcion2">Opción 2</a><a class="nav-link" href="#opcion3">Opción 3</a></div>', unsafe_allow_html=True)
+    st.markdown('<h2 id="opcion1">Opción 1</h2>', unsafe_allow_html=True)
     st.write("En esta sección, te explicaremos cómo usar las funciones básicas de la aplicación. Por ejemplo, cómo seleccionar un país y visualizar sus datos.")
 elif menu_option == "Opción 3":
     st.write("Aquí encontrarás información sobre la Opción 3.")
 else:
     st.write("Selecciona una opción del menú para ver la información relacionada.")
-
-# Sección Opción 1
-st.markdown('<h2 id="opcion1">Opción 1</h2>', unsafe_allow_html=True)
-st.write("Aquí encontrarás información sobre la Opción 1.")
 
 
 # Información de contacto
