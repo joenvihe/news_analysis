@@ -60,6 +60,7 @@ Nota: generar mapa conceptual con GPT
 
 ## Web de base
 - https://farolcovid.coronacidades.org/?page=Inicio#
+- https://github.com/ImpulsoGov/farolcovid/blob/stable/src/farolcovid.py
 
 ## Ejecucion
 > streamlit run app.py --server.port 8888
