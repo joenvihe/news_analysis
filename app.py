@@ -4,6 +4,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+
+
 # Cargar los datos de ejemplo (puedes reemplazarlo con tus propios datos)
 data = pd.DataFrame({
     'Fecha': pd.date_range('2023-01-01', '2023-08-31', freq='D'),
@@ -15,6 +17,32 @@ data = pd.DataFrame({
 # Título de la página
 st.set_page_config(layout="wide")
 # Esconder el mensaje de "Rerunning"
+
+
+
+# Estilos CSS para el menú de navegación
+st.markdown("""
+<style>
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+</style>
+""", unsafe_allow_html=True)
+
+# Menú de navegación
+st.markdown('<div class="navbar"><a class="nav-link" href="#inicio">Inicio</a><a class="nav-link" href="#opcion1">Opción 1</a><a class="nav-link" href="#opcion2">Opción 2</a><a class="nav-link" href="#opcion3">Opción 3</a></div>', unsafe_allow_html=True)
+
 st.title("Dashboard de Análisis de Datos")
 
 # Opciones del menú
