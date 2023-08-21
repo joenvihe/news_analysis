@@ -1,6 +1,6 @@
 import streamlit as st
 
-# Agregar el estilo CSS personalizado para el menú en el header
+# Estilo CSS para el menú en el header
 st.markdown(
     """
     <style>
@@ -27,28 +27,27 @@ st.markdown(
 st.markdown(
     """
     <div class="header">
-        <a class="menu-item" href="#" onclick="selectOption('Inicio')">Inicio</a>
-        <a class="menu-item" href="#" onclick="selectOption('Opción 1')">Opción 1</a>
-        <a class="menu-item" href="#" onclick="selectOption('Opción 2')">Opción 2</a>
+        <a class="menu-item" href="#inicio">Inicio</a>
+        <a class="menu-item" href="#opcion1">Opción 1</a>
+        <a class="menu-item" href="#opcion2">Opción 2</a>
     </div>
-    <script>
-    function selectOption(option) {
-        Streamlit.setSessionState({ selected_option: option });
-    }
-    </script>
     """,
     unsafe_allow_html=True,
 )
 
-# Contenido de la página
-st.title("Contenido de la Página")
+# Agregar espaciado para separar el menú del contenido
+st.write("")
 
-# Detectar la opción seleccionada en el menú
-if "selected_option" not in st.session_state:
-    st.session_state.selected_option = "Inicio"
+# Agregar secciones para cada opción del menú
+if st.button("Inicio"):
+    st.write("¡Hola! Bienvenido a la sección de Inicio.")
 
-# Mostrar el contenido correspondiente a la opción seleccionada
-if st.session_state.selected_option == "Opción 1":
-    st.write("Hola")
-elif st.session_state.selected_option == "Opción 2":
-    st.write("Adiós")
+if st.button("Opción 1"):
+    st.write("Esta es la sección de la Opción 1. ¡Contenido interesante!")
+
+if st.button("Opción 2"):
+    st.write("Aquí está la sección de la Opción 2. ¡Descubre más contenido!")
+
+# Agregar espaciado al final
+st.write("")
+
