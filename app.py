@@ -27,7 +27,7 @@ st.markdown(
     }
 
     div[data-testid='block-container']{
-        max-width=90%;
+        max-width:90%;
     }
 
     div[data-testid='stToolbar'] {
