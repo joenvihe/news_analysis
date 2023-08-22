@@ -11,6 +11,7 @@ st.markdown(
     .header {
         display: flex;
         justify-content: space-between;
+        width: 100%;
         background-color: #f2f2f2;
         padding: 10px 20px;
         align-items: center;
