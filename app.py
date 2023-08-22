@@ -1,17 +1,24 @@
 import streamlit as st
 
 # Estilo CSS para el menú en el header
+
+#
+#display: flex;
+#justify-content: space-between; 
+
 st.markdown(
     """
     <style>
     .header {
-        display: flex;
-        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        width: 100%;
         background-color: #f2f2f2;
         padding: 10px 20px;
         align-items: center;
+        z-index: 100;        
     }
-    
+
     .menu-item {
         margin-right: 20px;
         color: #333;
