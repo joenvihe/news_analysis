@@ -30,9 +30,9 @@ urlpath = ' http://157.230.88.234:8888'
 st.markdown(
     """
     <div class="header">
-        <a class="menu-item" href="{urlpath}?page=inicio">Inicio</a>
-        <a class="menu-item" href="{urlpath}?page=hola">Hola</a>
-        <a class="menu-item" href="{urlpath}?page=fin">Fin</a>
+        <a class="menu-item" href="?page=inicio">Inicio</a>
+        <a class="menu-item" href="?page=hola">Hola</a>
+        <a class="menu-item" href="?page=fin">Fin</a>
     </div>
     """,
     unsafe_allow_html=True,
