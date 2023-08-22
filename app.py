@@ -32,7 +32,7 @@ st.markdown(
     
     div[data-testid='block-container']{
         max-width:90%;
-        padding-top:4%; 
+        padding-top:0%; 
     }
 
     div[data-testid='stToolbar'] {
