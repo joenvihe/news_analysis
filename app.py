@@ -3,13 +3,14 @@ import streamlit as st
 # Estilo CSS para el menú en el header
 
 #
-#display: flex;
-#justify-content: space-between; 
+
 
 st.markdown(
     """
     <style>
     .header {
+        display: flex;
+        justify-content: space-between;
         position: fixed;
         top: 0;
         width: 100%;
