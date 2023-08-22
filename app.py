@@ -67,7 +67,6 @@ st.markdown(
 )
 
 # Agregar título a la portada
-st.title("Portada")
 query_params = st.experimental_get_query_params()
 if "page" in query_params:
     option = query_params["page"][0]
@@ -86,6 +85,7 @@ if option == "inicio":
 
     # Column 1: Display country data
     with col01:
+        st.title("Portada")
         st.write("Bienvenido al manual de usuario de la aplicación. Aquí encontrarás información sobre cómo utilizar la aplicación y sus características principales.")
     with col02:
         # Título de la página
