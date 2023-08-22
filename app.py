@@ -10,6 +10,7 @@ st.markdown(
     <style>
     .header {
         display: flex;
+        top: 0;
         justify-content: space-between;
         width: 100%;
         background-color: #f2f2f2;
