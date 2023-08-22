@@ -26,7 +26,7 @@ st.markdown(
         font-weight: bold;
     }
 
-    div[data-testid='stHeader'] {
+    header[data-testid='stHeader'] {
         height:0%;
     }
     
