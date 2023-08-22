@@ -95,8 +95,8 @@ if option == "inicio":
         # Definir el valor inicial del rango de fechas
         valor_inicial = (datetime(2023, 8, 1), datetime(2023, 8, 15))
         # Crear el rango de fechas utilizando st.date_input
-        st.title("Selector de Rango de Fechas // ({}-{})".format(str(fecha_min),str(fecha_max)))
-        rango_fechas = st.date_input("Selecciona un rango de fechas:", value=valor_inicial, min_value=fecha_min, max_value=fecha_max)
+        st.title("Selector de Rango de Fechas")
+        rango_fechas = st.date_input("Selecciona un rango de fechas:// ({}-{})".format(str(fecha_min),str(fecha_max)), value=valor_inicial, min_value=fecha_min, max_value=fecha_max)
         # Mostrar las fechas seleccionadas
         #st.write("Fecha de inicio:", rango_fechas[0])
         #st.write("Fecha de fin:", rango_fechas[1])
