@@ -42,7 +42,9 @@ st.markdown(
 st.title("Portada")
 query_params = st.experimental_get_query_params()
 print(query_params)
-option = "inicio"
+# Obtener el valor de la opción seleccionada
+option = st.session_state.get("option", "inicio")
+print(option)
 
 # Mostrar sección de Inicio
 if option == "inicio":
@@ -58,6 +60,12 @@ if option == "hola":
 if option == "fin":
     st.header("Fin")
     st.write("¡Gracias por visitar la sección de Fin!")
+
+
+# Actualizar la opción seleccionada al hacer clic en el enlace del menú
+if st.session_state.url_hash_changed:
+    page = st.session_state.url_hash_params.get("page", "inicio")
+    st.session_state.option = page
 
 # Agregar espaciado al final
 st.write("")
