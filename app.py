@@ -18,6 +18,10 @@ st.markdown(
         text-decoration: none;
         font-weight: bold;
     }
+
+    div[data-testid='stToolbar'] {
+        display: none;
+    }
     </style>
     """,
     unsafe_allow_html=True,
