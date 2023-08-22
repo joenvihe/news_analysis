@@ -37,12 +37,13 @@ st.markdown(
 query_params = st.experimental_get_query_params()
 print(query_params)
 # Obtener el valor de la opción seleccionada
-option = st.session_state.selected_option
+#option = st.session_state.selected_option
+option = "inicio"
 if option:
     print("hol")
 else:
     option = "inicio"
-    st.session_state.selected_option = option
+    #st.session_state.selected_option = option
 
 # Mostrar contenido según la opción seleccionada
 if option == "inicio":
