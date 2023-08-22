@@ -82,7 +82,7 @@ print(option)
 if option == "inicio":
     st.write("Bienvenido al manual de usuario de la aplicación. Aquí encontrarás información sobre cómo utilizar la aplicación y sus características principales.")
     # Create two columns layout
-    col1, col2 = st.columns(2)
+    col1, col2, col3 = st.columns(3)
 
     # Column 1: Display country data
     with col1:
@@ -116,6 +116,8 @@ if option == "inicio":
         plt.xticks(rotation=45)
         st.pyplot(plt)
 
+    # Column 3: Display charts
+    with col3:
         # Tabla de datos
         st.subheader("Tabla de Datos")
         st.dataframe(data)
