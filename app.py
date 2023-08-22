@@ -140,17 +140,14 @@ if option == "inicio":
         plt.xticks(rotation=45)
         st.pyplot(plt)
 
-    col31 = st.columns(1)
 
-    # Column 1: Display country data
-    with col31:
-        # Gráfico de dispersión para Ventas vs. Utilidad
-        st.subheader("Gráfico de Ventas vs. Utilidad")
-        plt.figure(figsize=(10, 6))
-        sns.scatterplot(data=data, x='Ventas', y='Utilidad')
-        plt.xlabel("Ventas")
-        plt.ylabel("Utilidad")
-        st.pyplot(plt)
+    # Gráfico de dispersión para Ventas vs. Utilidad
+    st.subheader("Gráfico de Ventas vs. Utilidad")
+    plt.figure(figsize=(10, 6))
+    sns.scatterplot(data=data, x='Ventas', y='Utilidad')
+    plt.xlabel("Ventas")
+    plt.ylabel("Utilidad")
+    st.pyplot(plt)
 
 # Mostrar mensaje "Hola"
 if option == "hola":
