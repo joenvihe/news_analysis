@@ -26,8 +26,13 @@ st.markdown(
         font-weight: bold;
     }
 
+    div[data-testid='stHeader'] {
+        heigth: 0%;
+    }
+    
     div[data-testid='block-container']{
         max-width:90%;
+        padding-top:4%; 
     }
 
     div[data-testid='stToolbar'] {
