@@ -45,7 +45,10 @@ print(query_params)
 # Obtener el valor de la opción seleccionada
 option = st.session_state.get("option", "inicio")
 print(option)
+if not option:
+    option = "inicio"
 
+    
 # Mostrar sección de Inicio
 if option == "inicio":
     st.header("Sección de Inicio")
@@ -60,12 +63,3 @@ if option == "hola":
 if option == "fin":
     st.header("Fin")
     st.write("¡Gracias por visitar la sección de Fin!")
-
-
-# Actualizar la opción seleccionada al hacer clic en el enlace del menú
-if st.session_state.url_hash_changed:
-    page = st.session_state.url_hash_params.get("page", "inicio")
-    st.session_state.option = page
-
-# Agregar espaciado al final
-st.write("")
