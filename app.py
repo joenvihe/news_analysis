@@ -27,7 +27,7 @@ st.markdown(
     }
 
     div[data-testid='stHeader'] {
-        heigth: 0%;
+        height:0%;
     }
     
     div[data-testid='block-container']{
