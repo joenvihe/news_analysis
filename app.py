@@ -39,7 +39,7 @@ st.markdown(
 st.title("Portada")
 query_params = st.experimental_get_query_params()
 print(query_params)
-option = inicio
+option = "inicio"
 
 # Mostrar sección de Inicio
 if option == "inicio":
