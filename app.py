@@ -101,7 +101,18 @@ if option == "inicio":
         st.write("Fecha de inicio:", rango_fechas[0])
         st.write("Fecha de fin:", rango_fechas[1])
 
-
+    # Agregar estilo CSS para alinear las columnas verticalmente
+    st.markdown(
+        """
+        <style>
+        .stButton>button {
+            display: block;
+            margin: 0 auto;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
 
     # Create two columns layout
