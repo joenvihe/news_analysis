@@ -23,13 +23,16 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+urlpath = ' http://157.230.88.234:8888'
+
+
 # Crear el menú en el header
 st.markdown(
     """
     <div class="header">
-        <a class="menu-item" href="#inicio">Inicio</a>
-        <a class="menu-item" href="#hola">Hola</a>
-        <a class="menu-item" href="#fin">Fin</a>
+        <a class="menu-item" href="{urlpath}?page=inicio>Inicio</a>
+        <a class="menu-item" href="{urlpath}?page=hola">Hola</a>
+        <a class="menu-item" href="{urlpath}?page=fin">Fin</a>
     </div>
     """,
     unsafe_allow_html=True,
