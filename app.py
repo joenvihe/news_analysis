@@ -79,8 +79,12 @@ print(option)
 if option == "inicio":
     st.write("Bienvenido al manual de usuario de la aplicación. Aquí encontrarás información sobre cómo utilizar la aplicación y sus características principales.")
     # Create a date slider
-    start_date = st.slider("Start date", date=datetime.date(2023, 1, 1))
-    end_date = st.slider("End date", date=datetime.date(2023, 12, 31))
+    #start_date = st.slider("Start date", date=datetime.date(2023, 1, 1))
+    #end_date = st.slider("End date", date=datetime.date(2023, 12, 31))
+
+    # Create a date slider
+    start_date = st.slider("Start date")
+    end_date = st.slider("End date")
     # Create two columns layout
     col1, col2, col3 = st.columns(3)
 
