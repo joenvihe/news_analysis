@@ -26,6 +26,10 @@ st.markdown(
         font-weight: bold;
     }
 
+    div[data-testid='block-container']{
+        width: 100%;
+    }
+
     div[data-testid='stToolbar'] {
         display: none;
     }
