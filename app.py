@@ -38,9 +38,10 @@ st.markdown(
 # Agregar título a la portada
 st.title("Portada")
 query_params = st.experimental_get_query_params()
-print(query_params)
-# Obtener el valor de la opción seleccionada
-option = st.session_state.get("option", "inicio")
+if "page" in query_params:
+    option = query_params["page"][0]
+else:
+    option = "inicio"
 print(option)
 
 # Mostrar sección de Inicio
