@@ -34,6 +34,8 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+query_params = st.experimental_get_query_params()
+print(query_params)
 # Obtener el valor de la opción seleccionada
 option = st.session_state.selected_option
 if option:
