@@ -45,21 +45,21 @@ print(query_params)
 # Obtener el valor de la opción seleccionada
 option = st.session_state.get("option", "inicio")
 print(option)
-if not option:
-    option = "inicio"
 
-    
 # Mostrar sección de Inicio
 if option == "inicio":
+    st.session_state.option = "inicio"
     st.header("Sección de Inicio")
     st.write("¡Bienvenido a la sección de Inicio! Aquí encontrarás información de la portada.")
 
 # Mostrar mensaje "Hola"
 if option == "hola":
+    st.session_state.option = "hola"
     st.header("¡Hola!")
     st.write("¡Hola! Este es un mensaje de saludo.")
 
 # Mostrar mensaje "Fin"
 if option == "fin":
+    st.session_state.option = "fin"
     st.header("Fin")
     st.write("¡Gracias por visitar la sección de Fin!")
