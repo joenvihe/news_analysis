@@ -27,10 +27,10 @@ urlpath = ' http://157.230.88.234:8888'
 
 
 # Crear el menú en el header
-st.write(
+st.markdown(
     """
     <div class="header">
-        <a class="menu-item" href="{urlpath}?page=inicio>Inicio</a>
+        <a class="menu-item" href="{urlpath}?page=inicio">Inicio</a>
         <a class="menu-item" href="{urlpath}?page=hola">Hola</a>
         <a class="menu-item" href="{urlpath}?page=fin">Fin</a>
     </div>
