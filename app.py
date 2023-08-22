@@ -89,17 +89,17 @@ if option == "inicio":
         st.write("Bienvenido al manual de usuario de la aplicación. Aquí encontrarás información sobre cómo utilizar la aplicación y sus características principales.")
     with col02:
         # Título de la página
-        st.title("Selector de Rango de Fechas")
         # Definir la fecha mínima y máxima para el rango
         fecha_min = datetime(2023, 1, 1)
         fecha_max = datetime(2023, 12, 31)
         # Definir el valor inicial del rango de fechas
         valor_inicial = (datetime(2023, 8, 1), datetime(2023, 8, 15))
         # Crear el rango de fechas utilizando st.date_input
+        st.title("Selector de Rango de Fechas // ({}-{})".format(str(fecha_min),str(fecha_max)))
         rango_fechas = st.date_input("Selecciona un rango de fechas:", value=valor_inicial, min_value=fecha_min, max_value=fecha_max)
         # Mostrar las fechas seleccionadas
-        st.write("Fecha de inicio:", rango_fechas[0])
-        st.write("Fecha de fin:", rango_fechas[1])
+        #st.write("Fecha de inicio:", rango_fechas[0])
+        #st.write("Fecha de fin:", rango_fechas[1])
 
     # Agregar estilo CSS para alinear las columnas verticalmente
     st.markdown(
