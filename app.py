@@ -96,15 +96,6 @@ if option == "inicio":
         plt.legend()
         st.pyplot(plt)
 
-
-        # Gráfico de dispersión para Ventas vs. Utilidad
-        st.subheader("Gráfico de Ventas vs. Utilidad")
-        plt.figure(figsize=(10, 6))
-        sns.scatterplot(data=data, x='Ventas', y='Utilidad')
-        plt.xlabel("Ventas")
-        plt.ylabel("Utilidad")
-        st.pyplot(plt)
-
     # Column 2: Display charts
     with col2:
         # Gráfico de barras para Utilidad
@@ -118,13 +109,37 @@ if option == "inicio":
 
     # Column 3: Display charts
     with col3:
-        # Tabla de datos
-        st.subheader("Tabla de Datos")
-        st.dataframe(data)
+        # Gráfico de dispersión para Ventas vs. Utilidad
+        st.subheader("Gráfico de Ventas vs. Utilidad")
+        plt.figure(figsize=(10, 6))
+        sns.scatterplot(data=data, x='Ventas', y='Utilidad')
+        plt.xlabel("Ventas")
+        plt.ylabel("Utilidad")
+        st.pyplot(plt)
 
-        # Resumen estadístico
-        st.subheader("Resumen Estadístico")
-        st.write(data.describe())
+    col21, col22 = st.columns(2)
+
+    # Column 1: Display country data
+    with col21:
+        # Gráfico de dispersión para Ventas vs. Utilidad
+        st.subheader("Gráfico de Ventas vs. Utilidad")
+        plt.figure(figsize=(10, 6))
+        sns.scatterplot(data=data, x='Ventas', y='Utilidad')
+        plt.xlabel("Ventas")
+        plt.ylabel("Utilidad")
+        st.pyplot(plt)
+
+    # Column 2: Display charts
+    with col22:
+        # Gráfico de barras para Utilidad
+        st.subheader("Gráfico de Utilidad")
+        plt.figure(figsize=(10, 6))
+        sns.barplot(data=data, x='Fecha', y='Utilidad')
+        plt.xlabel("Fecha")
+        plt.ylabel("Utilidad")
+        plt.xticks(rotation=45)
+        st.pyplot(plt)
+
 
 # Mostrar mensaje "Hola"
 if option == "hola":
