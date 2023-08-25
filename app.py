@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from datetime import datetime, timedelta
+import wordcloud
 
 
 # Cargar los datos de ejemplo (puedes reemplazarlo con tus propios datos)
@@ -182,12 +183,25 @@ if option == "inicio":
     # Column 3: Display charts
     with col3:
         # Gráfico de dispersión para Ventas vs. Utilidad
-        st.subheader("Gráfico de Ventas vs. Utilidad")
-        plt.figure(figsize=(10, 6))
-        sns.scatterplot(data=data, x='Ventas', y='Utilidad')
-        plt.xlabel("Ventas")
-        plt.ylabel("Utilidad")
-        st.pyplot(plt)
+        st.subheader("Lo mas resaltante")
+        #plt.figure(figsize=(10, 6))
+        #sns.scatterplot(data=data, x='Ventas', y='Utilidad')
+        #plt.xlabel("Ventas")
+        #plt.ylabel("Utilidad")
+        #st.pyplot(plt)
+
+        # Cargar el conjunto de datos
+        texto = "el,la, los , la , suma, unos, mas, que, la, palabra, la"
+        # Crear el objeto de gráfico de lluvia de palabras
+        wc = wordcloud.WordCloud(width=1000, height=500, background_color="white")
+        # Pasar el conjunto de datos al gráfico
+        wc.generate(texto)
+        # Crear un nuevo gráfico
+        fig = plt.figure(figsize=(10, 5))
+        # Mostrar el gráfico de lluvia de palabras
+        plt.imshow(wc.to_image())
+        # Mostrar el gráfico en Streamlit
+        st.image(plt.figure(figsize=(10, 6)))
 
     col21, col22 = st.columns(2)
 
