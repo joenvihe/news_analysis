@@ -104,13 +104,40 @@ if option == "inicio":
     # Column 1: Display country data
     with col1:
         # Gráfico de líneas para Ventas y Gastos
-        st.subheader("Gráfico de Ventas y Gastos")
-        plt.figure(figsize=(10, 6))
-        sns.lineplot(data=data, x='Fecha', y='Ventas', label='Ventas')
-        sns.lineplot(data=data, x='Fecha', y='Gastos', label='Gastos')
-        plt.xlabel("Fecha")
-        plt.ylabel("Monto")
-        plt.legend()
+        #st.subheader("Gráfico de Ventas y Gastos")
+        #plt.figure(figsize=(10, 6))
+        #sns.lineplot(data=data, x='Fecha', y='Ventas', label='Ventas')
+        #sns.lineplot(data=data, x='Fecha', y='Gastos', label='Gastos')
+        #plt.xlabel("Fecha")
+        #plt.ylabel("Monto")
+        #plt.legend()
+        #st.pyplot(plt)
+
+        st.subheader("Lo positivo") 
+        sns.set_theme(style="whitegrid")
+        # Initialize the matplotlib figure
+        f, ax = plt.subplots(figsize=(10, 6))
+        # Load the example car crash dataset
+        crashes = pd.DataFrame([
+            {"noticia":"n1","total":15,"positivo":6},
+            {"noticia":"n2","total":11,"positivo":7},
+            {"noticia":"n3","total":13,"positivo":3},
+            {"noticia":"n4","total":16,"positivo":9},
+            {"noticia":"n5","total":19,"positivo":5}
+        ]) 
+        # Plot the total crashes
+        sns.set_color_codes("pastel")
+        sns.barplot(x="total", y="noticia", data=crashes,
+                    label="Total", color="b")
+        # Plot the crashes where alcohol was involved
+        sns.set_color_codes("muted")
+        sns.barplot(x="positivo", y="noticia", data=crashes,
+                    label="Lo-positivo", color="b")
+        # Add a legend and informative axis label
+        ax.legend(ncol=2, loc="lower right", frameon=True)
+        ax.set(xlim=(0, 24), ylabel="",
+            xlabel="lo positivo por el total de noticias")
+        sns.despine(left=True, bottom=True)
         st.pyplot(plt)
 
     # Column 2: Display charts
