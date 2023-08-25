@@ -136,7 +136,7 @@ if option == "inicio":
         # Add a legend and informative axis label
         ax.legend(ncol=2, loc="lower right", frameon=True)
         ax.set(xlim=(0, 24), ylabel="",
-            xlabel="lo positivo por el total de noticias")
+            xlabel="Noticias positivas de la semana")
         sns.despine(left=True, bottom=True)
         st.pyplot(plt)
 
@@ -145,11 +145,39 @@ if option == "inicio":
         # Gráfico de barras para Utilidad
         st.subheader("Gráfico de Utilidad")
         plt.figure(figsize=(10, 6))
-        sns.barplot(data=data, x='Fecha', y='Utilidad')
-        plt.xlabel("Fecha")
-        plt.ylabel("Utilidad")
-        plt.xticks(rotation=45)
+        #sns.barplot(data=data, x='Fecha', y='Utilidad')
+        #plt.xlabel("Fecha")
+        #plt.ylabel("Utilidad")
+        #plt.xticks(rotation=45)
+        #st.pyplot(plt)
+        sns.set_theme(style="darkgrid")
+        # Load an example dataset with long-form data
+        fmri = pd.DataFrame([
+            {"timepoint":1,"noticia":"n1","tipo":"p","cant":6},
+            {"timepoint":1,"noticia":"n1","tipo":"N","cant":3},
+            {"timepoint":1,"noticia":"n2","tipo":"p","cant":11},
+            {"timepoint":1,"noticia":"n2","tipo":"N","cant":12},
+            {"timepoint":1,"noticia":"n3","tipo":"p","cant":16},
+            {"timepoint":1,"noticia":"n3","tipo":"N","cant":13},
+            {"timepoint":2,"noticia":"n1","tipo":"p","cant":16},
+            {"timepoint":2,"noticia":"n1","tipo":"N","cant":13},
+            {"timepoint":2,"noticia":"n2","tipo":"p","cant":1},
+            {"timepoint":2,"noticia":"n2","tipo":"N","cant":2},
+            {"timepoint":2,"noticia":"n3","tipo":"p","cant":6},
+            {"timepoint":2,"noticia":"n3","tipo":"N","cant":3},
+            {"timepoint":5,"noticia":"n1","tipo":"p","cant":10},
+            {"timepoint":5,"noticia":"n1","tipo":"N","cant":12},
+            {"timepoint":5,"noticia":"n2","tipo":"p","cant":5},
+            {"timepoint":5,"noticia":"n2","tipo":"N","cant":10},
+            {"timepoint":5,"noticia":"n3","tipo":"p","cant":14},
+            {"timepoint":5,"noticia":"n3","tipo":"N","cant":11} 
+        ])
+        # Plot the responses for different events and regions
+        sns.lineplot(x="timepoint", y="cant",
+                    hue="noticia", style="tipo",
+                    data=fmri)
         st.pyplot(plt)
+
 
     # Column 3: Display charts
     with col3:
