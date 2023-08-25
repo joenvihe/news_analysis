@@ -70,6 +70,7 @@ Nota: generar mapa conceptual con GPT
 ```
 {
     "resumen del texto": "El texto habla ...",
+    "p&n": "positivo; porque se plantea la necesidad de un..."
     "1 palabra": "reforma; porque el texto se centr....",
     "ideas principales": 
         ["Necesidad de una reforma política en el poder legislativo",
