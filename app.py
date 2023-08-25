@@ -197,11 +197,11 @@ if option == "inicio":
         # Pasar el conjunto de datos al gráfico
         wc.generate(texto)
         # Crear un nuevo gráfico
-        fig = plt.figure(figsize=(10, 5))
+        fig = plt.figure(figsize=(10, 6))
         # Mostrar el gráfico de lluvia de palabras
         plt.imshow(wc.to_image())
         # Mostrar el gráfico en Streamlit
-        st.image(plt.figure(figsize=(10, 6)))
+        st.pyplot(fig)
 
     col21, col22 = st.columns(2)
 
