@@ -65,8 +65,44 @@ Nota: generar mapa conceptual con GPT
 ## Ejecucion
 > streamlit run app.py --server.port 8888
 
+## Estructura de data
 
-
-
+```
+{
+    "resumen del texto": "El texto habla ...",
+    "1 palabra": "reforma; porque el texto se centr....",
+    "ideas principales": 
+        ["Necesidad de una reforma política en el poder legislativo",
+         "Importancia de respetar la presunción de inocencia",
+         "Rol de las autoridades en cumplir sus competencias sin extralimitarse",
+         "Demanda competencial presentada por ....",
+         "Autonomía y jerarquía del Ministerio Público"
+        ],
+    "palabras claves": 
+        ["reforma política",
+        "presunción de inocencia",
+        "autoridades",
+        "extralimitación",
+        "demanda competencial",
+        "Ministerio Público"],
+    "categoria": "politica",
+    "entidades": [
+         {  
+            "nombre": "José Luis Argón de Taboada",
+            "tipo": "constitucionalista",
+            "descripción": "Presidió el equip...",
+            "se habla": "Presidió el equipo",
+            "propiedad detallada": "Presidió"
+         },
+         {
+            "nombre": "Ernesto Álvarez Miranda",
+            "tipo": "doctor",
+            "descripción": "Integrante del equip...",
+            "se habla": "Integrante del equipo\",
+            "propiedad detallada": "Integrante"
+        }
+    ]
+}
+```
 
 
